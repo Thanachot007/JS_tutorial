@@ -58,19 +58,73 @@
 //     alert("I don't know");
     
 // }
-i=0;
-while(i<3){
-    console.log("epoch : "+i);
-    i+=1;
-}
-do{
-    console.log("epoch : "+i);
-    i++;
-}while(i<3);
+// i=0;
+// while(i<3){
+//     console.log("epoch : "+i);
+//     i+=1;
+// }
+// do{
+//     console.log("epoch : "+i);
+//     i++;
+// }while(i<3);
 
-for(let j = 0; j < 3; j++){
-    console.log("epoch : "+j);
+// for(let j = 0; j < 3; j++){
+//     console.log("epoch : "+j);
+// }
+
+// let sum=0;
+// while(true){
+//     let message  = prompt("insert number");
+//     let number = parseInt(message);
+//     sum += number;
+//     if(!message){
+//         break;
+//     }
+// }
+
+// for(let i = 0;i<10;i++){
+//     if(i%2==0){
+// continue;
+//     }
+//     console(i);
+// }
+
+// let arr = new Array();
+// let arr2 = [];
+// let myCar = ["Chev" , "Ford" , "Buick" , "Lincoln","Truck"];
+// myCar[0] = "Nissan"
+// myCar[5] = "BMW"
+// console.log(myCar[0]);
+
+// let arr = ['Apple',{name : 'john'},true,function(){alert('hello');}];
+// alert(arr[1].name);
+// arr[3](); 
+
+let myCar = ["Chev" , "Ford" , "Buick" , "Lincoln","Truck"];
+for(let i = 0 ; i<myCar.length;i++){
+    console.log(myCar[i]);
 }
+console.log("----------------------------------");
+for(let car of myCar){
+    console.log(car);
+}
+console.log("----------------------------------");
+
+for(let key in myCar){
+console.log(myCar[key]);
+}
+console.log("----------------------------------");
+
+console.log(myCar.pop()); //ได้ last index
+myCar.push("nissan");
+console.log(myCar.pop()); //ได้ last index ตอนนี้ต้องเป็น nissan เพราะเราให้ push คือใส่ค่าต่อจาก index สุดท้าย
+
+console.log(myCar.shift());// ได้ first index
+myCar.unshift("Toyota"); //จะทำการ shift index ออกไปตัวละ 1 ช่องจาก index เริ่ม และใส่ตัวเองลงใน index เริ่มแทน 
+console.log(myCar.shift());// ได้ first index
+
+
+
         </script>
     </head>
 
