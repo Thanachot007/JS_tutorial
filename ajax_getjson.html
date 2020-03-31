@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#get_json").click(function(event){
+        $.getJSON('result_json.json', function(jd){
+            $("#result").html('<p> Name : '+jd.fname  + '</p>');
+            $("#result").append('<p> Last Name : '+jd.lname  + '</p>');
+            $("#result").append('<p> gender : '+jd.gender  + '</p>');
+        });
+        });
+    });
+</script>
+    </head>
+    <body> 
+        <p>result place</p>
+       <div id="result">
+stage
+       </div> 
+       <input type="button" id="get_json" value="get_json">
+    </body>
+</html>
