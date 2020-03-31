@@ -123,8 +123,24 @@ console.log(myCar.shift());// ได้ first index
 myCar.unshift("Toyota"); //จะทำการ shift index ออกไปตัวละ 1 ช่องจาก index เริ่ม และใส่ตัวเองลงใน index เริ่มแทน 
 console.log(myCar.shift());// ได้ first index
 
+let user = {
 
+    fname : "Thanachot",
+    lname : "Tesjaroen",
+    age : 22
+};
+alert(user.fname);
 
+let user2 = new Object();
+user2.fname = "Patchara";
+user2.lname = "Mangkorn";
+user2.age = 23;
+console.log(user2.fname);
+let clone = Object.assign({},user);
+// delete user.lname;
+let admin = user;
+user.lname = "sangounpouk";
+console.log(admin.lname);
         </script>
     </head>
 
