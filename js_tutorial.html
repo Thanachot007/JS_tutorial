@@ -1,6 +1,13 @@
 <html>
-    <head></head>
-<body>
+    <head>
+        <style>
+            .body{
+                color:red;
+                margin: 5px;
+            }
+        </style>
+    </head>
+<body class="body">
  <!-- <div id="div_helloworld">
      Hello world
  </div> -->
@@ -26,11 +33,39 @@
         A paragraph
     </p>
 </div>
- <!-- <ul>
+
+<div id="txt">
+    <h1>Head1</h1>
+    <p>Martian attact people</p>
+</div>
+<div id="elephant" about="elephant"></div>
+<!-- <ul>
      <li>has</li>
      <li>passed</li>
  </ul> -->
- <script>
+ <div id="div" style="color: blue;font-size: 120%;">Hello</div>
+ <a href="#aaa" id="a1">link</a>
+
+ <div id="class2" class="main page"></div>
+ <div style="background-color: red; color:white" id="div3">test style</div>
+
+ <ul id="list">
+     <li>1</li>
+     <li>2</li>
+ </ul>
+
+<div id="div4">
+    div4
+</div>
+<div id="div5" onmouseover="this.style.backgroundColor = 'red' " onmouseout="this.style.backgroundColor = 'white'"> 
+    <p id="p1">Hello div5</p>
+    <input type="text" name="message" id="message" onkeyup="console.log(this.value)"><br>
+    <button onclick="showMessage()">click me!!!</button><br>
+    <p id="p2">
+
+    </p>
+</div>
+<script>
     //  let div_hello = document.getElementById("div_helloworld");
     //  div_hello.style.background = 'red';
     //  div_hello.style.width = "auto";
@@ -46,12 +81,50 @@
 //      console.log(i.innerHTML);
 //  }
 
-let chapter = document.querySelector('.chapter');
-console.log(chapter.closest('.ul_1').innerHTML);
-console.log(chapter.closest('.content').innerHTML);
+// let chapter = document.querySelector('.chapter');
+// console.log(chapter.closest('.ul_1').innerHTML);
+// console.log(chapter.closest('.content').innerHTML);
+// alert(txt.textContent);
 
-alert(document.body.innerHTML);
-    document.body.innerHTML = "Hello body";
+
+// alert(document.body.innerHTML);
+    // document.body.innerHTML = "Hello body";
+    console.log(elephant.getAttribute('about'));
+    elephant.setAttribute('test',123);
+    console.log(elephant.outerHTML);
+    console.log(div.getAttribute('style'));
+    console.log(div.style);
+    console.log(div.style.color);
+
+    console.log(a1.getAttribute('href'));
+    console.log(a1.href);
+    console.log("class name in HTML TAG : "+class2.classList[0]);
+    console.log("class name in HTML TAG : "+class2.classList[1]);
+    // class2.classList.add('popular');
+    // class2.classList.toggle('popular');
+    // class2.classList.remove('main');
+    // console.log(class2.classList.contains('main'));
+    
+    
+    for(let i of class2.classList){
+        console.log("class name in HTML TAG : "+i);
+    }
+    let computeStyle = getComputedStyle(document.body);
+    console.log(computeStyle.marginTop);
+    console.log(computeStyle.color);
+console.log(div3.style.backgroundColor);
+// let message = div3.style.backgroundColor = prompt("text : ");
+// let newLi = document.createElement('li');
+// newLi.innerHTML = message;
+list.prepend("prepend");
+list.append("append");
+
+div4.before("<p>Before</p>",document.createElement('hr'));
+div4.after("<p>After</p>",document.createElement('hr'));
+function showMessage(){
+p2.innerHTML = message.value;
+p2.style.color = "black";
+}
  </script>
 </body>
     </html>
