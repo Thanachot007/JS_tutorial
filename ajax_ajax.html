@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script>
+$(document).ready(function(){
+$("#get_json").click(function(event){
+    $.ajax({
+        type:'GET',
+        url:'result_json2.json',
+        dataType:"json",cache:false,
+        success : function(data){
+            data.forEach(element => {
+            $("#result").append("<p> Name : " +element.name+"</p>" );
+            $("#result").append("<p> LName : " +element.lname+"</p>" );
+            $("#result").append("<p> gender : " +element.gender+"</p>" );
+            });
+        }
+    })
+})
+
+})
+</script>
+    </head>
+    <body>
+              <p>result place</p>
+       <div id="result">
+stage
+       </div> 
+       <input type="button" id="get_json" value="get_json">  
+    </body>
+</html>
